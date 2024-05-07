@@ -149,6 +149,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 lenguageButton.addEventListener("click", () => {
     flag = 0;
+    lenguageFlag = 0;
+    localStorage.setItem("lenguageFlag", lenguageFlag);
     localStorage.setItem("flag", flag);
     location.reload();
 })
