@@ -283,6 +283,16 @@ header{
     
 }
 
+.team_know-btn{
+    color: var(--container-3-background);
+    border-radius: 3px;
+    background-color: var(--main-text-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin: 20px;
+    padding: 10px;
+}
+
 .emoji{
     font-size: 3.5rem;
 }
@@ -401,7 +411,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--container-3-background) ;
+    background-color: var(--container-1-background) ;
     box-sizing: content-box;
     border-top: 2px var(--main-text-color) solid;
     width: 100%;
@@ -440,6 +450,51 @@ header{
     cursor: pointer;
 }
 
+.footer{
+    border-top: 2px solid var(--main-text-color);
+    background-color: var(--container-3-background);
+    width: 100%;
+    height: 300px;
+}
+
+.team-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    flex-direction: column;
+    background-color: #588157;
+    height: 2100px;
+}
+
+.team-description{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description-cotainer{
+    font-size: 1.6rem;
+    color: var(--main-text-color);
+}
+
+.about_us-container{
+    font-size: 3.0rem;
+    color: var(--main-text-color);
+}
+
+.title_about-us{
+    text-align: center;
+    height: 200px;
+}
+
+.container_3-dashboard{
+    background-color: var(--container-2-background);
+    height: 400px;
+}
+
 
 @media (min-width:403px){
     .container_1{
@@ -448,6 +503,10 @@ header{
         box-sizing: content-box;
         background-color: var(--container-1-background);
         padding: 25px;
+    }
+
+    .team-container{
+        height: 2200px;
     }
 
     #p-about-boris{
@@ -484,6 +543,8 @@ header{
         align-content: center;
         flex-wrap: nowrap;
     }
+
+
 
     .images-container{
         display: flex;
@@ -541,4 +602,24 @@ header{
         height: 100%;
         width: 50%;
     }
+
+    .team-description{
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 600px;
+    }
+
+    .description-cotainer{
+        width: 53%;
+    }
+    .dev-image{
+        width: 200px;
+        height: 300px;
+    }  
+
+    .team-container{
+        height: 1300px;
+    }
+
+
 }

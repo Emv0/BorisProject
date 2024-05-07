@@ -20,8 +20,11 @@ flag = 0;
 lenguageFlag = 0;
 h3Important = document.getElementById("h3-important");
 dataTitle = document.getElementById("data-title");
-knowMore=document.getElementById("know-more");
+knowMore = document.getElementById("know-more");
 dataBtn = document.getElementById("data-btn");
+rol = document.querySelectorAll(".rol");
+ourTeam = document.getElementById("our-team");
+teamKnowBtn = document.getElementById("team_know-btn");
 
 emoji.addEventListener("click", () => {
     youKnow.style.display = "flex";
@@ -74,20 +77,24 @@ data3.addEventListener("click", () => {
     }
 });
 
-you_know.addEventListener("click", () => {
+youKnow.addEventListener("click", () => {
     youKnow.style.cursor = "auto"
     emojiYouKnow.style.width = "370px";
     emojiYouKnow.style.height = "480px";
     you_know.style.height = "410px";
     you_know.style.width = "330px";
     emoji.textContent = "😁"
-    you_know.innerHTML =
-        `<span id="know-close" class="know-close">✖️</span>Los datos utilizados por BORIS para llevar a cabo sus análisis y servicios provienen de
+    if (lenguageFlag2 == 1) {
+        youKnow.innerHTML = `<span id="know-close" class="know-close">✖️</span>The data used by BORIS to carry out its analyses and services come from reliable and verified sources. In particular, the company extracts relevant information from the website <a class="medata-url"href="http://medata.gov.co/search/?publisher__name=Medell%C3%8Dn%20en%20Cifras">MEDATA</a>, which is an official platform that collects data on Medellín and its key figures in various areas. This data is essential for the development of effective solutions in environmental management and for making informed decisions to improve the quality of life in the city and its surroundings.`
+    } else {
+        youKnow.innerHTML =
+            `<span id="know-close" class="know-close">✖️</span>Los datos utilizados por BORIS para llevar a cabo sus análisis y servicios provienen de
     fuentes confiables y verificadas. En particular, la empresa extrae información relevante de la página web
     <a class="medata-url"href="http://medata.gov.co/search/?publisher__name=Medell%C3%8Dn%20en%20Cifras">MEDATA</a>
     la cual es una plataforma oficial que recopila datos sobre Medellín y sus cifras clave en diversos ámbitos.
     Estos datos son fundamentales para el desarrollo de soluciones efectivas en la gestión ambiental y la toma
-    de decisiones informadas para mejorar la calidad de vida en la ciudad y sus alrededores.`
+    de decisiones informadas para mejorar la calidad de vida en la ciudad y sus alrededores.`;
+    }
     close()
 });
 
@@ -109,41 +116,53 @@ document.getElementById("btn-español").addEventListener("click", () => {
 document.getElementById("btn-ingles").addEventListener("click", () => {
     lenguageFlag = 1;
     flag = 1;
-    localStorage.setItem("lenguageFlag",lenguageFlag)
+    localStorage.setItem("lenguageFlag", lenguageFlag)
     localStorage.setItem("flag", flag);
     languageSelector.style.display = "none";
     content.style.display = "block";
     homeItem.textContent = "Home";
-    aboutUs.textContent = "About us"
-    pageItem.textContent = "Home"
-    dashboardItem.textContent = "Dashboard"
-    dataTitle.textContent = "DATA"
+    aboutUs.textContent = "About us";
+    pageItem.textContent = "Home";
+    dashboardItem.textContent = "Dashboard";
+    youKnow.textContent = "Did you know...";
+    dataTitle.textContent = "DATA";
     h3Important.textContent = "THE IMPORTANCE OF DATA"
-    aboutBoris.textContent = "about BORIS";
+    aboutBoris.textContent = "About BORIS";
+    ourTeam.textContent = "Our Team";
+    teamKnowBtn.textContent = "Meet the team"
+    rol.forEach(dev => {
+        dev.textContent = "Developer";
+    });
     PAboutboris.textContent = "BORIS, a Colombian company, experts committed to data analysis and smart solutions for socio-environmental management. Our mission is to develop a record base that enhances human impact on the environment and society. We collaborate with various sectors to promote sustainability and responsible development. We are guided by transparency, ethics, and the desire to build a better future for all."
-    pTitle.textContent = `Ground Decision`
+    pTitle.textContent = `Ground Decision`;
     dataP.textContent = `The data provide a solid foundation for making informed decisions in environmental management. They allow for identifying problems, evaluating trends, and designing effective strategies to address environmental challenges.`
-    knowMore.textContent = "Know More"
-    dataBtn.textContent = "More Information"
+    knowMore.textContent = "Know More";
+    dataBtn.textContent = "More Information";
 })
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
     lenguageFlag2 = localStorage.getItem("lenguageFlag");
-    if (lenguageFlag2 == 1){
+    if (lenguageFlag2 == 1) {
         languageSelector.style.display = "none";
         content.style.display = "block";
         homeItem.textContent = "Home";
-        aboutUs.textContent = "About us"
-        pageItem.textContent = "Home"
-        dashboardItem.textContent = "Dashboard"
-        dataTitle.textContent = "DATA"
-        h3Important.textContent = "THE IMPORTANCE OF DATA"
-        aboutBoris.textContent = "about BORIS";
-        PAboutboris.textContent = "BORIS, a Colombian company, experts committed to data analysis and smart solutions for socio-environmental management. Our mission is to develop a record base that enhances human impact on the environment and society. We collaborate with various sectors to promote sustainability and responsible development. We are guided by transparency, ethics, and the desire to build a better future for all."
-        pTitle.textContent = `Ground Decision`
-        dataP.textContent = `The data provide a solid foundation for making informed decisions in environmental management. They allow for identifying problems, evaluating trends, and designing effective strategies to address environmental challenges.`
-        knowMore.textContent = "Know More"
-        dataBtn.textContent = "More Information"
+        aboutUs.textContent = "About us";
+        pageItem.textContent = "Home";
+        dashboardItem.textContent = "Dashboard";
+        dataTitle.textContent = "DATA";
+        h3Important.textContent = "THE IMPORTANCE OF DATA";
+        aboutBoris.textContent = "About BORIS";
+        youKnow.textContent = "Did you know...";
+        PAboutboris.textContent = "BORIS, a Colombian company, experts committed to data analysis and smart solutions for socio-environmental management. Our mission is to develop a record base that enhances human impact on the environment and society. We collaborate with various sectors to promote sustainability and responsible development. We are guided by transparency, ethics, and the desire to build a better future for all.";
+        pTitle.textContent = `Ground Decision`;
+        ourTeam.textContent = "Our Team";
+        teamKnowBtn.textContent = "Meet the team"
+        rol.forEach(dev => {
+            dev.textContent = "Developer";
+        });
+        dataP.textContent = `The data provide a solid foundation for making informed decisions in environmental management. They allow for identifying problems, evaluating trends, and designing effective strategies to address environmental challenges.`;
+        knowMore.textContent = "Know More";
+        dataBtn.textContent = "More Information";
     }
 })
 
