@@ -20,3 +20,17 @@ if (lenguageFlag2 == 1) {
     description3.textContent = "My name is Camilo Correa and I have been studying programming for a year and three months. Although I do not have previous work experience as a programmer, I am committed to applying my knowledge and continuing to develop in this fascinating field."
 }
 })
+
+upBtn = document.getElementById("up-btn");
+
+window.addEventListener("scroll", ()=>{
+    if (window.scrollY >= 400){
+        upBtn.style.display = "flex";
+    }else{
+        upBtn.style.display = "none";
+    }
+})
+
+upBtn.addEventListener("click", ()=>{
+    window.scrollTo({top:0, behavior: 'smooth'});
+})

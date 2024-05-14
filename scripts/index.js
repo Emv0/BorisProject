@@ -25,6 +25,20 @@ dataBtn = document.getElementById("data-btn");
 rol = document.querySelectorAll(".rol");
 ourTeam = document.getElementById("our-team");
 teamKnowBtn = document.getElementById("team_know-btn");
+upBtn = document.getElementById("up-btn");
+
+window.addEventListener("scroll", ()=>{
+    if (window.scrollY >= 400){
+        upBtn.style.display = "flex";
+    }else{
+        upBtn.style.display = "none";
+    }
+})
+
+upBtn.addEventListener("click", ()=>{
+    window.scrollTo({top:0, behavior: 'smooth'});
+})
+
 
 emoji.addEventListener("click", () => {
     youKnow.style.display = "flex";
