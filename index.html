@@ -115,21 +115,15 @@
                 <i class="fa-solid fa-arrow-up"></i>
             </div>
             <section class="container-4">
-                <h2>ESCRIBENOS TUS DUDAS</h2>
+                <h2 id="questions">ESCRIBENOS TUS DUDAS</h2>
                 <form action="" class="form-doubts">
-                    <label class="name-input input-container">
-                        Tu nombre 
-                        <br>
-                        <input type="text" placeholder="Nombre" class="inputs">
-                    </label>
-                    <label class="email-input input-container">
-                        Tu nombre
-                        <br>
-                        <input type="email" placeholder="Correo" class="inputs">
-                    </label>
-                    <textarea class="text-area-doubts" name="doubts" id="" placeholder="Escribe tus dudas"></textarea>
+                    <label id="form-name" class="name-input input-container" for="inputName">Tu Nombre</label>
+                    <input type="text" placeholder="Nombre" class="inputs" id="inputName">
+                    <label id="form-email" class="email-input input-container" for="email">Tu Correo</label>
+                    <input type="email" placeholder="Correo" class="inputs" id="email">
+                    <textarea class="text-area-doubts" name="doubts" id="text-form" placeholder="Escribe tus dudas"></textarea>
                     <div class="button-container">
-                        <button class="btn btn-enviar" style="font-size: 1.6rem;">Enviar</button>
+                        <button id="btn_send-form" class="btn btn-enviar" style="font-size: 1.6rem;">Enviar</button>
                     </div>
                 </form>
             </section>

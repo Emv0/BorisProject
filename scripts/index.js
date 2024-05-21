@@ -26,6 +26,14 @@ rol = document.querySelectorAll(".rol");
 ourTeam = document.getElementById("our-team");
 teamKnowBtn = document.getElementById("team_know-btn");
 upBtn = document.getElementById("up-btn");
+questions = document.getElementById("questions");
+formName = document.getElementById("form-name");
+formEmail = document.getElementById("form-email");
+let inputName = document.getElementById("inputName");
+let inputEmail = document.getElementById("email");
+let textForm = document.getElementById("text-form");
+let btnSendForm = document.getElementById("btn_send-form");
+
 
 window.addEventListener("scroll", ()=>{
     if (window.scrollY >= 400){
@@ -98,7 +106,7 @@ youKnow.addEventListener("click", () => {
     you_know.style.height = "410px";
     you_know.style.width = "330px";
     emoji.textContent = "😁"
-    if (lenguageFlag2 == 1) {
+    if (lenguageFlag != 0) {
         youKnow.innerHTML = `<span id="know-close" class="know-close">✖️</span>The data used by BORIS to carry out its analyses and services come from reliable and verified sources. In particular, the company extracts relevant information from the website <a class="medata-url"href="http://medata.gov.co/search/?publisher__name=Medell%C3%8Dn%20en%20Cifras">MEDATA</a>, which is an official platform that collects data on Medellín and its key figures in various areas. This data is essential for the development of effective solutions in environmental management and for making informed decisions to improve the quality of life in the city and its surroundings.`
     } else {
         youKnow.innerHTML =
@@ -144,6 +152,13 @@ document.getElementById("btn-ingles").addEventListener("click", () => {
     aboutBoris.textContent = "About BORIS";
     ourTeam.textContent = "Our Team";
     teamKnowBtn.textContent = "Meet the team"
+    questions.textContent = "WRITE US YOUR QUESTIONS"; 
+    formName.textContent = "Your name";
+    formEmail.textContent = "Your email";
+    inputName.placeholder = "Name";
+    textForm.placeholder = "Write your questions"
+    inputEmail.placeholder = "Email";
+    btnSendForm.textContent = "Send"
     rol.forEach(dev => {
         dev.textContent = "Developer";
     });
@@ -170,7 +185,14 @@ document.addEventListener("DOMContentLoaded", () => {
         PAboutboris.textContent = "BORIS, a Colombian company, experts committed to data analysis and smart solutions for socio-environmental management. Our mission is to develop a record base that enhances human impact on the environment and society. We collaborate with various sectors to promote sustainability and responsible development. We are guided by transparency, ethics, and the desire to build a better future for all.";
         pTitle.textContent = `Ground Decision`;
         ourTeam.textContent = "Our Team";
-        teamKnowBtn.textContent = "Meet the team"
+        teamKnowBtn.textContent = "Meet the team";
+        questions.textContent = "WRITE US YOUR QUESTIONS"; 
+        formName.textContent = "Your name";
+        formEmail.textContent = "Your email";
+        inputName.placeholder = "Name";
+        inputEmail.placeholder = "Email";
+        textForm.placeholder = "Write your questions"
+        btnSendForm.textContent = "Send"
         rol.forEach(dev => {
             dev.textContent = "Developer";
         });

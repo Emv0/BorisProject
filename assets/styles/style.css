@@ -535,6 +535,7 @@ header{
     bottom: 70px;
     background-color: var(--container-3-background);
     height: 50px;
+    overflow-y: hidden;
     width: 50px;
     right: 12px;
     border-radius: 25px;
@@ -558,6 +559,10 @@ header{
     background-color: var(--container-3-background);
     border-top: 2px solid var(--main-text-color);
     color: var(--main-text-color);
+}
+
+.up-btn:hover{
+    border:1px solid var(--main-text-color);
 }
 
 .inputs{
