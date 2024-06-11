@@ -29,10 +29,10 @@ upBtn = document.getElementById("up-btn");
 questions = document.getElementById("questions");
 formName = document.getElementById("form-name");
 formEmail = document.getElementById("form-email");
-let inputName = document.getElementById("inputName");
-let inputEmail = document.getElementById("email");
-let textForm = document.getElementById("text-form");
-let btnSendForm = document.getElementById("btn_send-form");
+const inputName = document.getElementById("inputName");
+const inputEmail = document.getElementById("email");
+const textForm = document.getElementById("text-form");
+const btnSendForm = document.getElementById("btn_send-form");
 
 
 window.addEventListener("scroll", ()=>{
